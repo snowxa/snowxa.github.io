@@ -1,0 +1,461 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="在嘈杂的流量时代，留存一份跨越周期的深度思考">
+      
+      
+        <meta name="author" content="wudan">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://zensical.org/assets/zensical.svg">
+      <meta name="generator" content="zensical-0.0.36">
+    
+    
+      
+        <title>当AI从“问答”走向“执行” - 清醒手记</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.1e981d71.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/ziti.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="导航栏"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="清醒手记" class="md-header__button md-logo" aria-label="清醒手记" data-md-component="logo">
+      
+  <img src="https://zensical.org/assets/zensical.svg" alt="清醒手记">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="导航栏">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            清醒手记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              当AI从“问答”走向“执行”
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="关闭自动模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="关闭自动模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="查找">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="查找">
+  <button type="button" class="md-search__button">
+    查找
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="清醒手记" class="md-nav__button md-logo" aria-label="清醒手记" data-md-component="logo">
+      
+  <img src="https://zensical.org/assets/zensical.svg" alt="清醒手记">
+
+    </a>
+    清醒手记
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        约束越多，代理越强？
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TPU的“外溢”与谷歌云的“三重奏”
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        为什么谷歌云能“逃过一劫”？
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="ai">当AI从“问答”走向“执行”<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h1>
+<p><img alt="头图封面" src="../ai-works.jpg" /></p>
+<p>谷歌云CEO托马斯·库里安（Thomas Kurian）与我今年的对话，始于一个关键的时间节点。去年，大家还在讨论AI代理（Agent）这个概念，而今年，它已经从理论走向了大规模的实际应用。库里安开门见山地指出，今年谷歌云Next大会的主题，正是围绕“代理时刻”展开的。
+“随着AI模型变得越来越复杂，我们看到客户的使用方式正在发生根本性的转变，”库里安解释道，“他们不再仅仅把AI当作一个聊天机器人来回答问题，而是开始用它来自动化执行任务，甚至自动化组织内部的整个流程。”
+这种转变，对技术栈提出了全新的要求。你需要一个世界级的代理平台，以及支撑它的世界级基础设施。更重要的是，代理必须能够理解你公司的数据和业务上下文。与此同时，AI与网络安全的结合也变得空前紧密，因为AI本身也会加速网络攻击的速度。因此，今年的主题将围绕如何将AI与网络安全技术（包括对Wiz公司的整合）结合起来，并正式向客户推出Gemini企业版和我们的代理平台。
+库里安强调，从去年到今年，有三四个关键变化让“代理”这件事变得不同。首先是模型能力本身的大幅提升，Gemini拥有了更强的推理能力和更持久的“记忆”，这对于执行多步骤、长时间的任务至关重要。其次，模型与外部工具和系统的交互方式有了巨大进步，比如通过MCP（模型上下文协议）这样的抽象层，代理可以更智能地调用企业内部的各类系统。最后，这些抽象层本身也在不断优化，让模型能够处理极其复杂的任务。</p>
+<h3 id="_1">约束越多，代理越强？<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>当谈到这些复杂的流程时，我提出了一个观点：似乎约束越多、需要对接的系统越复杂，反而越适合部署这类AI代理？库里安的回答非常坦诚：“说实话，本，约束条件越多，对模型的智能要求就越高。”
+他举了一个例子：一个复杂的流程可能有成百上千种变体，你不可能预先穷举所有情况。你需要教会模型，当遇到未知情况时，如何自主地生成代码、调用工具来达成目标。比如，当用户只是说“我需要预约”，模型需要能应对19种不同的预约场景，并根据“预约”这个最终目标，自主生成解决问题的路径。
+这引出了一个关键问题：谷歌云如何与DeepMind团队紧密协作，将这种复杂的业务需求反馈到模型训练中？库里安透露，他们的合作非常紧密。“我们有一个‘马具’（harness），所有从客户那里观察到的流程和旅程都会被放入其中，然后反馈到Gemini的强化学习循环中。”他提到，这种闭环能力是谷歌在市场上的独特优势之一。
+这种优势体现在三个层面：第一，拥有从芯片到模型到应用的全栈AI技术，这使得模型可以不断从复杂的业务场景中“爬山”学习。第二，拥有强大的基础设施，无论是传统的计算集群还是TPU，都能支撑模型在处理长流程时所需的巨大算力和内存。第三，拥有处理企业数据的深厚功底。库里安特别提到了一个新产品“知识目录”（Knowledge Catalog），它相当于公司所有信息的全球字典，让模型能准确理解“库存”、“零件”等概念在复杂数据库中的真实含义。
+当然，我也提出了一个常见的疑虑：谷歌作为一家庞大的公司，内部有无数业务线，这个“马具”和反馈机制会不会被各种需求拉扯得支离破碎？库里安的回答非常坚定：“不会。谷歌的每一个产品，都在同一个小时、同一天，使用同一个版本的Gemini和同一个‘马具’。”
+他承认，外界一直有关于谷歌是否“分心”的猜测，但事实胜于雄辩。目前谷歌云每分钟处理160亿个Token，这个数字还在快速增长。“很多人2023年说我们完了，但我们活得好好的，”他笑着说，“让客户的故事来证明一切。”</p>
+<h3 id="tpu">TPU的“外溢”与谷歌云的“三重奏”<a class="headerlink" href="#tpu" title="Permanent link">&para;</a></h3>
+<p>我们的对话随后转向了谷歌云更广泛的战略。一个核心议题是：当谷歌云既提供自家的Gemini模型，又为Anthropic这样的竞争对手提供TPU算力时，如何平衡这种“既当裁判又当运动员”的关系？
+“我们是在销售技术栈的不同部分，”库里安解释道，“很多AI实验室都在使用我们的技术栈。如果他们用我们的TPU来训练或推理模型，我们就在那个层面获得了收入，这反过来又能支持我们的研发投入。有些实验室用我们的TPU和Gemini模型，有些只用TPU，再买我们的网络安全服务。作为平台玩家，我们必须让自己的技术以尽可能多的方式变现，这不是一个零和游戏。”
+这引出了一个更深层的权衡：当谷歌云既要服务好自家Gemini业务（高利润的SaaS层），又要确保TPU这种基础设施（低利润但高投入的IaaS层）被充分利用时，优先级如何设定？库里安用了一个非常形象的比喻来解释：“如果TPU只为我们自己服务，那我们的产量就会很低，而且使用率会有明显的‘昼夜节律’——白天用户提问多，晚上就闲置了。因为我们向市场销售TPU，我们就能以‘现货’价格提供闲置算力，同时还能因为规模效应获得更好的制造和供应链条件，从而降低我们的整体成本。这是一个动态平衡。”
+接着，我们谈到了一个重要的新动向：谷歌云正在推出第八代TPU，并首次允许客户在谷歌数据中心之外使用它们。这包括两种型号：专为训练优化的TPU 8t，以及专为推理优化的TPU 8i。库里安透露，除了AI实验室，金融服务业和高性能计算领域（如能源建模、计算流体动力学）对TPU的需求正在爆发。例如，对冲基金Citadel Securities和美国能源部都已成为TPU的客户。
+“这些新客户的需求很特别，”库里安说，“比如资本市场的公司，他们对延迟极其敏感，要求我们把TPU部署到他们交易所所在的机房附近。而国家实验室则有海量数据，不可能全部搬到云端。所以，我们正在推出一种新的销售方式：你可以把TPU作为一个系统来购买，而不仅仅是通过云服务来租用。”
+这实际上创造了一种“第三种”模式：除了在谷歌自己的数据中心使用，以及将TPU部署到客户指定的机房，还有像Anthropic与博通（Broadcom）合作，将TPU放入他们自己数据中心的新模式。当被问及这是否意味着对TPU的分配和产能造成更大压力时，库里安的回答很巧妙：“不要以为你在媒体上读到的一切都是真的……我们的芯片是全球统一分配的，博通是我们的制造合作伙伴，这只是一个整体的商业布局。”</p>
+<h3 id="_2">为什么谷歌云能“逃过一劫”？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>最近几个月，许多SaaS公司的股价都遭受重创，但谷歌云却逆势增长。我问库里安，为什么他们能幸免？他的回答归结为两点：前瞻性的战略转型和果断的执行力。
+“2023年，我们就决定不仅要构建一个安全的云，还要开始提供网络安全产品，”库里安回忆道，“我们分析后认为，只有两个地方最值得保护：一个是终端（桌面），但那里已经有很多玩家；另一个是云端，因为所有应用和数据都在向那里迁移。所以，我们决定保护云端。同时，我们预见到AI会以前所未有的速度发现漏洞，所以我们必须提前布局。于是，我们收购了Wiz。”
+他进一步解释了AI如何重塑网络安全。谷歌利用Gemini扫描暗网，识别出海量威胁，然后通过AI进行优先级排序，告诉客户“哪些威胁真正与你相关”。这个“威胁情报代理”的准确率高达98%，过去一年处理了390万个威胁。而结合Wiz，他们又推出了“红队代理”、“蓝队代理”和“绿队代理”，分别负责持续攻击测试、分析漏洞和自动修复，极大地缩短了安全响应周期。
+“当人们问‘为什么你们能在困难的市场中增长？’答案就是我们做出了差异化，并且行动得足够早。”库里安总结道。
+最后，我们谈到了一个更具哲学意味的问题：随着Gemini这样的强大模型不断进化，它是否会“吞噬一切”，最终让所有第三方应用和系统都沦为它的“记录系统”？库里安给出了否定的答案。
+“我们不这么看，”他说，“事实上，你会看到大量的独立软件供应商（ISV）正在将Gemini作为他们的代理平台嵌入到自己的产品中。我们为他们构建了所有复杂的底层‘管道’——身份认证、策略管理、审计追踪、技能注册中心等等。他们不需要重复造轮子，可以专注于自己业务的价值创造。我们不是在消灭生态系统，而是在赋能和加速它。”
+这场对话让我深刻感受到，谷歌云已经不再是几年前那个“技术领先但不懂企业”的玩家。它通过整合从芯片到模型到应用的全栈能力，并展现出一种务实、开放、愿意为客户解决“脏活累活”的态度，为即将到来的“代理时代”做好了准备。正如库里安所言，六年前人们说他们没机会，但现在，他们可能是唯一一个拥有芯片、模型、数据基础设施、网络安全工具和世界级代理平台的公司。这种独一无二的定位，或许正是他们在当前市场环境下能持续增长的根本原因。</p>
+<hr />
+<p><em>声明：本文核心观点提取自互联网，经独立数字策展人本土化深度转译与结构重组，仅供商业逻辑学习与思考。</em></p>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025～2026 wudan
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","navigation.prune","navigation.tracking","navigation.tabs","navigation.sections","navigation.top","navigation.expand","navigation.indexes","navigation.instant","navigation.instant.prefetch","search.suggest","search.highlight","search.share","toc.follow","content.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dbc0afdc.min.js"></script>
+      
+    
+  </body>
+</html>

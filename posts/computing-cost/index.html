@@ -1,0 +1,459 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="在嘈杂的流量时代，留存一份跨越周期的深度思考">
+      
+      
+        <meta name="author" content="wudan">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://zensical.org/assets/zensical.svg">
+      <meta name="generator" content="zensical-0.0.36">
+    
+    
+      
+        <title>算力的机会成本：当“边际成本为零”的神话终结 - 清醒手记</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.1e981d71.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/ziti.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="导航栏"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="清醒手记" class="md-header__button md-logo" aria-label="清醒手记" data-md-component="logo">
+      
+  <img src="https://zensical.org/assets/zensical.svg" alt="清醒手记">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="导航栏">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            清醒手记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              算力的机会成本：当“边际成本为零”的神话终结
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="关闭自动模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="关闭自动模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="查找">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="查找">
+  <button type="button" class="md-search__button">
+    查找
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="清醒手记" class="md-nav__button md-logo" aria-label="清醒手记" data-md-component="logo">
+      
+  <img src="https://zensical.org/assets/zensical.svg" alt="清醒手记">
+
+    </a>
+    清醒手记
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anthropic" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        算力的机会成本：微软的取舍和Anthropic的困境
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        为什么Meta是这场游戏里最独特的玩家
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        需求 vs. 供给：聚合理论的遗产
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="_1">算力的机会成本：当“边际成本为零”的神话终结<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p><img alt="头图封面" src="../computing-cost.jpg" /></p>
+<p>在2025年初，知名分析师Doug O'Laughlin断言，o1等推理模型的出现标志着“聚合理论”时代的终结。他给出的理由直指一个核心变化：边际成本不再为零。
+要理解这个判断的冲击力，得先明白什么是“边际成本”。它指的是多生产一个单位商品所增加的成本。想象一个制造小零件的工厂：你需要厂房、机器、电力和工人。厂房和机器是固定成本，不管生产多少零件，这笔钱都得花。但原材料、电力和人力在传统工厂里是典型的边际成本——多做一个零件，就要多花一份原材料钱，多耗一度电，多付一份工资。
+边际成本之所以重要，是因为它构成了价格的底线。一家公司哪怕亏本运营，只要产品售价高于边际成本，它就会继续生产，因为至少每个产品还能带来边际利润。它或许不会投资新的固定成本，甚至可能最终因债务利息破产，但在那之前，它会一直生产下去。
+我花这么多篇幅解释这个常识，恰恰是因为它在科技行业几乎完全失效了。科技产品的输出是数字化的，没有原材料成本。巨大的固定成本（如服务器、数据中心）让电力和人力也变成了固定成本——你无论如何都会让服务器全天满载运行，因为多赚一分钱都是赚的。
+人工智能完全符合这个范式：输出是数字的，AI芯片虽然耗电，但比起芯片本身的成本，电费只是零头。没人会因为边际成本的计算而闲置AI芯片。它们一定会被用起来。真正的问题，不是“用不用”，而是“用来做什么”。</p>
+<h3 id="anthropic">算力的机会成本：微软的取舍和Anthropic的困境<a class="headerlink" href="#anthropic" title="Permanent link">&para;</a></h3>
+<p>微软在最近一个季度的财报电话会议上，给出了一个极具启发性的例子。当被问及为何Azure的增长率低于市场预期时，CFO艾米·胡德坦言：不是没有需求，而是公司决定将算力优先用于自己的产品。她解释说，微软在分配GPU时，首先解决的是M365 Copilot和GitHub Copilot等自研应用的需求，其次是投资于长期的研发和创新。最后剩下的，才用来服务Azure的客户。
+她甚至算了一笔账：如果她把刚上线的GPU全部投入Azure，Azure的增长率会超过40%。但她没有这么做，因为自研产品的毛利率更高，生命周期价值更大。这里的关键词不是“边际成本”，而是“机会成本”——把算力花在一个地方，就不能再花在另一个地方。
+这正是所有超大规模云服务商面临的挑战。微软需要在Azure（包括企业客户和OpenAI）、自有软件业务之间平衡；亚马逊要在电商、AWS、以及对Anthropic和OpenAI的战略投资之间取舍；谷歌则要周旋于GCP、对Anthropic的投资、以及消费者业务之间。
+这种机会成本的逻辑，也完美解释了Anthropic为何要“雪藏”其最先进的模型——Mythos。上周，Anthropic宣布了Mythos，但并未广泛发布，而是将其用于一个名为“Project Glasswing”的网络安全项目。公司声称，Mythos已经发现了数千个高危漏洞，包括所有主流操作系统和浏览器中的漏洞。他们担心，如果不加以控制，这种能力很快会扩散到不负责任的行动者手中。
+我曾在之前的文章中将Anthropic的这种“灾难营销”比作“狼来了”的故事。但这个故事的关键不在于牧童多次谎报，而在于最后狼真的来了。即便Mythos本身不是那个威胁，下一个模型也一定会是。所以，将其用于防御性的漏洞挖掘，是合理的。
+但还有两个更现实的原因，解释了为什么Anthropic不愿让Mythos广泛可用。第一，还是机会成本。Anthropic的算力已经捉襟见肘，过去一个月里，用户抱怨Claude“变笨”的声音不绝于耳。如果让Mythos面向所有订阅用户开放，情况只会更糟。第二，保护定价权。Anthropic真正的长期竞争对手不是OpenAI，而是开源模型。开源模型通过“蒸馏”技术——即用更强大的模型输出来训练一个更小的模型——可以快速复制前沿能力。Anthropic已经指控DeepSeek、Moonshot和MiniMax等实验室进行了大规模的蒸馏攻击。限制Mythos的发布，就是在限制竞争对手“偷”走自己的能力，从而维持自己的定价权和算力优势。</p>
+<h3 id="meta">为什么Meta是这场游戏里最独特的玩家<a class="headerlink" href="#meta" title="Permanent link">&para;</a></h3>
+<p>同样是在上周，Meta也发布了其新前沿实验室的第一个成果——Muse Spark。这是一个原生多模态推理模型，支持工具使用、视觉思维链和多智能体编排。它并非最顶尖的模型，但已经进入了牌局。更重要的是，它证明了扎克伯格在九个月前决定“彻底重构AI努力”是正确的。
+推动这一转变的，是“推理”和“智能体”的兴起。推理模型需要消耗更多token来得出更好的答案；而智能体则可以无休止地调用大语言模型，无需人类介入。这导致了对算力的指数级需求。Anthropic和OpenAI的收入因此飙升，但它们也面临一个两难：是服务好消费者市场，还是优先满足企业客户？
+OpenAI的挑战尤其典型。它拥有ChatGPT这个极其成功的消费者产品，但这反而成了它的机会成本。为了服务庞大的免费用户，它消耗了大量算力，而这些算力本可以用于利润率更高的企业级智能体应用。OpenAI虽然正在大力投资算力，并规划了广告收入，但短期内，它必须做出痛苦的取舍。
+这正是Meta的独特之处。在所有超大规模云服务商和前沿实验室中，Meta是唯一一个不需要担心企业云业务的公司。这意味着，服务消费者市场对它而言，没有任何机会成本。它已经拥有一个规模庞大的广告业务来变现用户的使用。换句话说，Meta在消费者AI领域的竞争，反而可能比几个月前看起来更轻松，因为其他对手要么被企业客户分心，要么被算力短缺所困。
+这也就解释了为什么Meta应该将Muse开源。开源一个前沿模型，最受伤的是其他前沿实验室——他们的定价权会被削弱，对算力的竞争会更加激烈。这会让他们更难承受服务消费者市场的机会成本，从而将这个市场拱手让给Meta。</p>
+<h3 id="vs">需求 vs. 供给：聚合理论的遗产<a class="headerlink" href="#vs" title="Permanent link">&para;</a></h3>
+<p>那么，“聚合理论的时代”真的结束了吗？
+从某种意义上说，聚合理论的核心洞察——拥有客户才能创造和维持价值——依然成立。在消费者端，拥有客户意味着广告收入，进而可以反过来补贴服务。在企业端，Anthropic和OpenAI正在向上游移动，直接与软件提供商竞争，这本质上也是在争夺客户。
+但O'Laughlin的观察同样重要：我们正面临算力约束。公司不能再假设自己可以服务所有人，因为服务一群客户，就意味着无法服务另一群。这种约束不会永远持续——总有一天，AI会“足够好”，算力会足够充裕，让边际成本为零的优势真正体现出来。但那个未来，似乎比以往任何时候都更遥远。
+OpenAI正在押注，它通过大规模投资获得的算力优势，将比Anthropic当前的用户势头更重要。它告诉投资者，自己在“快速且持续地”增加算力容量方面已经领先。但我对此不那么确定。在AI领域，分发和交易成本仍然是零——这正是聚合者得以存在的两个前提。这意味着，最终的赢家应该是那些拥有最 compelling 产品的公司。产品赢得用户，用户带来收入，收入换来算力。Anthropic已经通过与谷歌的TPU交易，获得了相当一部分供应。
+换句话说，我的判断是：<strong>拥有需求最终将胜过拥有供给</strong>。聚合理论的底层逻辑依然在起作用。OpenAI需要用更好的产品来赢得竞争，而不仅仅是更多的算力。当然，如果更多的算力是打造更好产品的关键，那么供给也许就变得最重要了。无论如何，它们都将专注于服务那些推动Anthropic惊人增长的企业客户。而真正可能被牺牲的，是它们目前主导的消费者市场——因为Meta在那里，既没有损失，只有收获。</p>
+<hr />
+<p><em>声明：本文核心观点提取自互联网，经独立数字策展人本土化深度转译与结构重组，仅供商业逻辑学习与思考。</em></p>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025～2026 wudan
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","navigation.prune","navigation.tracking","navigation.tabs","navigation.sections","navigation.top","navigation.expand","navigation.indexes","navigation.instant","navigation.instant.prefetch","search.suggest","search.highlight","search.share","toc.follow","content.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dbc0afdc.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,479 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="在嘈杂的流量时代，留存一份跨越周期的深度思考">
+      
+      
+        <meta name="author" content="wudan">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://zensical.org/assets/zensical.svg">
+      <meta name="generator" content="zensical-0.0.36">
+    
+    
+      
+        <title>脉动：GitHub 还是AI原生开发的最佳选择吗？ - 清醒手记</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.1e981d71.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/ziti.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="导航栏"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#github-ai" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="清醒手记" class="md-header__button md-logo" aria-label="清醒手记" data-md-component="logo">
+      
+  <img src="https://zensical.org/assets/zensical.svg" alt="清醒手记">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="导航栏">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            清醒手记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              脉动：GitHub 还是AI原生开发的最佳选择吗？
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="关闭自动模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="关闭自动模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="查找">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="查找">
+  <button type="button" class="md-search__button">
+    查找
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="清醒手记" class="md-nav__button md-logo" aria-label="清醒手记" data-md-component="logo">
+      
+  <img src="https://zensical.org/assets/zensical.svg" alt="清醒手记">
+
+    </a>
+    清醒手记
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        当AI代理的洪流冲垮了基础设施
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        一家初创公司给GitHub上了一课
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        迷失的北极星：GitHub为何失焦？
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="github-ai">脉动：GitHub 还是AI原生开发的最佳选择吗？<a class="headerlink" href="#github-ai" title="Permanent link">&para;</a></h1>
+<p><img alt="封面" src="../ai-github.jpg" /></p>
+<p>我们早已习惯了高度可靠的系统，它们追求“四个九”的可用性（99.99%，意味着每年大约52分钟的停机时间）。连勉强达到“三个九”（每年约9小时停机）都会让人觉得难堪。然而，在过去一个月里，GitHub的可靠性已经跌到了“一个九”！
+以下数据来自第三方网站“缺失的GitHub状态页面”，这个页面是在GitHub因自身可用性太差而停止更新其官方状态页面后建立的。最近，情况看起来相当糟糕：
+<img alt="Image 2" src="https://storage.ghost.io/c/39/f8/39f85cc7-8637-40fc-a57c-f45754453717/content/images/2026/04/image.png" />
+<em>GitHub跌至一个九。来源：缺失的GitHub状态页面</em>
+这意味着，每30天里，GitHub有3天会出现问题，或者每天有大约2.5小时处于故障或降级状态（约占10%的时间）。</p>
+<h2 id="ai">当AI代理的洪流冲垮了基础设施<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
+<p>GitHub似乎无力应对来自AI代理（AI agents，即能自主执行任务的程序，比如自动写代码、提合并请求的机器人）所带来的基础设施负载的巨幅增长。一位软件工程师搭建了一个巧妙的网站，名为“Claude的代码”，专门追踪Claude Code机器人（Anthropic公司开发的AI编码助手）在GitHub上的贡献。过去三个月里，其增长势头惊人：
+<img alt="Image 3" src="https://storage.ghost.io/c/39/f8/39f85cc7-8637-40fc-a57c-f45754453717/content/images/2026/04/image-1.png" />
+<em>Claude Code带来的负载在3个月内增长了6倍。来源：Claude的代码</em>
+GitHub的CTO弗拉基米尔·费多罗夫在一篇博文中回应了可用性问题，并提及了三次重大事故：
+*   <strong>2月9日</strong>：一个数据库集群因负载过高而饱和。数据库的扩容远比无状态服务（stateless services，不存储用户数据，可随意增加实例的服务）要困难。GitHub显然低估了额外流量的规模。
+*   <strong>2月2日</strong>：一次基础设施故障在向健康区域切换时，因遥测数据缺失（telemetry gap，指系统缺乏足够的数据来感知和诊断问题），导致安全策略错误地封锁了对虚拟机元数据的访问，让情况雪上加霜。
+*   <strong>3月5日</strong>：与2月2日的事故惊人地相似。故障切换后，一个配置问题导致Redis集群（一种高性能的键值对存储系统，常用于缓存和消息队列）的写入操作失败。
+软件工程师洛里·霍克斯坦对这些事故和CTO的回应做了富有洞察力的分析。她的观察很有意思：基础设施的压力正在引发更多问题，问题触发资源瓶颈的速度越来越快，而故障切换（failover，当主系统出问题时，自动切换到备用系统的过程）远未达到应有的平滑程度。这会不会是因为GitHub一直在改动其现有系统，导致稳定性下降？</p>
+<h2 id="github">一家初创公司给GitHub上了一课<a class="headerlink" href="#github" title="Permanent link">&para;</a></h2>
+<p>就在GitHub疲于应对AI代理生成更多代码和合并请求（Pull Request，开发者请求将自己的代码合并到主项目的一种机制）带来的负载时，一家名为Pierre Computer的初创公司声称，他们已经为AI代理推送代码构建了一个“AI原生”解决方案，其扩展能力远超GitHub。Pierre的创始人是雅各布·桑顿，他曾是Coinbase、Medium和Twitter的工程师，也是曾红极一时的Bootstrap CSS库的创造者。
+Pierre支持而GitHub不支持的功能如下：</p>
+<blockquote>
+<p>“2025年10月，GitHub分享说他们平均每分钟创建约230个新仓库。</p>
+<p>上周，我们（Pierre Computer）在3小时内持续达到了每分钟超过15,000个新仓库的峰值。</p>
+<p>在过去30天里，客户已经创建了超过900万个仓库。”
+这些数字令人难以置信——尽管是Pierre自己报告的——但显然是GitHub目前无法企及的！关于客户的具体信息很少，而其名为“Code.storage”的产品似乎仍在封闭测试阶段。
+尽管如此，这正是GitHub未能构建的“面向AI代理的Git”，也是它急需的那种基础设施。</p>
+</blockquote>
+<h2 id="github_1">迷失的北极星：GitHub为何失焦？<a class="headerlink" href="#github_1" title="Permanent link">&para;</a></h2>
+<p>GitHub的可靠性问题已经非常严重。如果持续下去，团队们可能会尝试像Pierre这样的小型初创公司作为替代方案，甚至考虑自建Git托管服务。但全球最大的Git托管商是如何忽视其客户，未能为其基础设施应对代码提交和合并请求的激增做好准备的呢？
+Ghostty的创始人、GitHub的重度用户米切尔·桥本，在对自己核心产品状态感到沮丧后，给出了他若掌管GitHub会采取的行动建议。他写道（重点为原文所加）：</p>
+<blockquote>
+<p>“如果我是GitHub的负责人，我会按以下顺序行动：</p>
+<p><strong>1. 制定一个‘北极星’计划，将自身定位为‘代理化代码生命周期’的关键基础设施</strong>，并确定一套衡量标准。</p>
+<p><strong>2. 解雇所有从事或倡导Copilot工作的人，并关闭它。</strong> 这与个人能力无关，我相信里面有很多有才华的人；只是你们在错误的公司工作。</p>
+<p><strong>3. 收购Pierre，并将‘代理化仓库托管’作为第一个代理化产品推出。</strong> 仓库应该与遗留的Web产品分开，因为它们很可能被遗留的跨产品交互所拖累。</p>
+<p><strong>4. 根据新的‘北极星’重新评估所有产品线和计划。</strong> 我猜测其中50%会被砍掉（以便为不同的产品腾出空间）。</p>
+<p>核心思想是：所有代理化的交互都应该严重依赖GitHub的API。代码审查应该是代理化的，但实验室应该将其构建到GitHub中（而不是像现在这样通过GHA（GitHub Actions，自动化工作流工具）拼接上去，而是真正的第一方平台原语）。GitHub绝对应该推出一个代理聊天原语，代理邮箱显然也是好的。GitHub应该成为一个平台，而不是一个代理本身。</p>
+<p>由于我只能基于外部信息，对GitHub的内部运作、他们的KPI或他们定义的‘北极星’一无所知，所以这显然会有所欠缺。</p>
+<p>但基于不完整的信息，这就是我会做的。”
+我的感觉是，GitHub同时面临三个问题：
+*   <strong>GitHub和Copilot与微软的内部政治纠缠不清。</strong> GitHub的Copilot在2021年是第一个取得巨大成功的“AI产品”。微软将“Copilot”品牌用于其所有产品线，制造了许多低质量的AI集成。同时，微软内部的Azure和Microsoft AI等组织一直试图将GitHub据为己有，而GitHub是微软旗下最受开发者欢迎的品牌之一。
+*   <strong>GitHub没有领导者，这似乎是刻意为之。</strong> GitHub的上一任CEO托马斯·多姆克自愿离职，微软从未填补这个CEO职位，而是进行重组，将GitHub并入微软的AI部门，剥夺了其独立性。看起来，“微软AI”一方赢得了这场内部斗争。
+*   <strong>GitHub没有焦点，只盯着Copilot作为收入来源。</strong> GitHub没有CEO，深陷内部政治，那么GitHub团队能做什么？最稳妥的做法是增加收入，而最佳途径就是加大对GitHub Copilot的投入，忽视像可靠性这样的长期问题。
+我同意米切尔的看法：GitHub没有“北极星”，我们看到一个庞大的组织正陷入功能失调。这种愿景的缺失——以及CEO的缺失——正在带来沉重打击：
+*   GitHub Copilot从2021年使用最广泛的AI代理，已被Claude Code超越，并且很快将被Cursor超越。
+*   作为一个平台，GitHub对于如何演进以支持AI代理毫无愿景。诚然，GitHub有一个MCP服务器，但它没有一个能够处理AI代理产生的巨大负载的“AI原生Git平台”。
+*   GitHub持续发布小功能和小改进，却毫无方向。例如，2025年10月，他们开始着手开发“堆叠差异”（stacked diffs，一种将代码修改拆分成多个小提交的工作流）。然而，当它发布时，这种工作流可能已经过时了——至少对于AI代理来说是这样！
+当你在某件事上比世界上任何人都做得更好时，赢得市场是很容易的。而现在，GitHub做的事情太多，在Copilot、其平台和AI基础设施上都做得差强人意。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025～2026 wudan
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","navigation.prune","navigation.tracking","navigation.tabs","navigation.sections","navigation.top","navigation.expand","navigation.indexes","navigation.instant","navigation.instant.prefetch","search.suggest","search.highlight","search.share","toc.follow","content.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"已复制","clipboard.copy":"复制","search.result.more.one":"在该页上还有 1 个符合条件的结果","search.result.more.other":"在该页上还有 # 个符合条件的结果","search.result.none":"没有找到符合条件的结果","search.result.one":"找到 1 个符合条件的结果","search.result.other":"# 个符合条件的结果","search.result.placeholder":"键入以开始搜索","search.result.term.missing":"缺少","select.version":"选择当前版本"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dbc0afdc.min.js"></script>
+      
+    
+  </body>
+</html>
